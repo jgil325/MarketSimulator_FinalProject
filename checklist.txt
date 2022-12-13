@@ -1,0 +1,21 @@
+Checklist of what completed
+
+	- compute_portval method completed
+	- portfolio cumulative return completed
+	- portfolio average daily return completed
+	- portfolio standard deviation completed
+	- portfolio sharpe ration completed
+	- Final portfolio value completed
+
+	- $SPX cumulative return completed
+	- $SPX average daily return completed
+	- $SPX standard deviation completed
+	- $SPX sharpe ration completed 
+
+	- order book working
+	- order csv files are all read correctly and the proper buying and selling is done
+	- added commission
+	- added impact
+
+
+	Quick summary: everything should be working!!!
