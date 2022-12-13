@@ -1,5 +1,12 @@
 Checklist of what completed
 
+	Effort Level: This was harder than expected, harder than homeworks.
+	Having to incorporate IBonds was extremely difficult as I had to come up with the
+	way to do it myself. Eventually, I settled on manually editing a csv file for each
+	dollar value of portfolio needed to be IBonds, and then in my order csv files, I
+	would "buy" 1 stock of that Ibond whose price I manipulated to act like it would
+	pay out interest twice a year every 6 months.
+
 	- QQQ data
 	- SPY data
 	- SPXL data
