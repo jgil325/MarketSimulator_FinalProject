@@ -1,21 +1,39 @@
 Checklist of what completed
 
-	- compute_portval method completed
-	- portfolio cumulative return completed
-	- portfolio average daily return completed
-	- portfolio standard deviation completed
-	- portfolio sharpe ration completed
-	- Final portfolio value completed
+	- QQQ data
+	- SPY data
+	- SPXL data
+	- TQQQ data
+	- SQQQ data
+	- IBOND csv data for $2000 (20% of portfolio)
+	- IBOND csv data for $5000 (50% of portfolio)
+	- IBOND csv data for $8000 (80% of portfolio)
+	- IBOND csv data for $10000 (100% of portfolio)
 
-	- $SPX cumulative return completed
-	- $SPX average daily return completed
-	- $SPX standard deviation completed
-	- $SPX sharpe ration completed 
+	- Orders for portfolio of SPY
+	- Orders for portfolio of SPXL
+	- Orders for portfolio of QQQ
+	- Orders for portfolio of TQQQ
+	- Orders for portfolio of SQQQ
+	- Orders for portfolio of SQQQ in 2022 only
+	- Orders for portfolio of 20% IBONDS 80% SPY
+	- Orders for portfolio of 50% SPXL 50% IBONDS
+	- Orders for portfolio of 20% SQQQ 80% IBONDS
+	- Orders for portfolio of 100% IBONDS
+	- Orders for portfolio of 20% SQQQ 40% SPXL 40% TQQQ
 
-	- order book working
-	- order csv files are all read correctly and the proper buying and selling is done
-	- added commission
-	- added impact
+	- Data plot for portfolio of SPY
+	- Data plot for portfolio of SPXL
+	- Data plot for portfolio of QQQ
+	- Data plot for portfolio of TQQQ
+	- Data plot for portfolio of SQQQ
+	- Data plot for portfolio of SQQQ in 2022 only
+	- Data plot for portfolio of 20% IBONDS 80% SPY
+	- Data plot for portfolio of 50% SPXL 50% IBONDS
+	- Data plot for portfolio of 20% SQQQ 80% IBONDS
+	- Data plot for portfolio of 100% IBONDS
+	- Data plot for portfolio of 20% SQQQ 40% SPXL 40% TQQQ
 
 
-	Quick summary: everything should be working!!!
+
+	Quick summary: CODE is working and done, both presentations done, still missing video and report due later.
