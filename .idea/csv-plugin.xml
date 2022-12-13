@@ -87,6 +87,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/orders/FINAL_PROJECT_ORDERS_SPY.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/orders/FINAL_PROJECT_ORDERS_SQQQ.csv">
           <value>
             <Attribute>

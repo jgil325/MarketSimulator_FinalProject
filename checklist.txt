@@ -34,6 +34,4 @@ Checklist of what completed
 	- Data plot for portfolio of 100% IBONDS
 	- Data plot for portfolio of 20% SQQQ 40% SPXL 40% TQQQ
 
-
-
 	Quick summary: CODE is working and done, both presentations done, still missing video and report due later.

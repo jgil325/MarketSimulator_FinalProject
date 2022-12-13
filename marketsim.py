@@ -56,8 +56,6 @@ def compute_portvals(orders_file="./orders/orders.csv", start_val=10000, commiss
 
 
 def GetSpyDf(start, end):
-    # In the template, instead of computing the value of the portfolio, we just
-    # read in the value of IBM over 6 months
     start_date = start
     end_date = end
     portvals = get_data(['SPY'], pd.date_range(start_date, end_date))
@@ -71,6 +69,61 @@ def RunCode():
     # note that during autograding his function will not be called.
     # Define input parameters
 
+    # Get portfolio stats
+    # Here we just fake the data. you should use your code from previous assignments.
+    # start_date = start
+    # end_date = end
+    # portvals_spy = GetSpyDf(start, end)
+    # portvals_spy = portvals_spy.loc[:, 'SPY']
+    # daily_returns_spy = portvals_spy.pct_change(1)
+    # std_daily_spy = daily_returns_spy.std()
+    # sr_df_spy = daily_returns_spy - 0.0
+    # sr_spy = np.sqrt(252) * (sr_df_spy.mean() / std_daily_spy)
+    # daily_returns_spy = daily_returns_spy.mean()
+    #
+    # cum_ret, avg_daily_ret, std_daily_ret, sharpe_ratio = [(portvals.iloc[-1] - 10000) / 10000, daily_returns,
+    #                                                        std_daily, sr]
+    # cum_ret_SPY, avg_daily_ret_SPY, std_daily_ret_SPY, sharpe_ratio_SPY = [(portvals_spy.iloc[-1] - 10000) / 10000,
+    #                                                                        daily_returns_spy,
+    #                                                                        std_daily_spy, sr_spy]
+
+
+
+    # Create Portfolio Comprised of SPY ------------------------------------------------------------------
+    of = "./orders/FINAL_PROJECT_ORDERS_SPY.csv"
+    sv = 10000
+
+    # Process orders
+    portvals, start, end = compute_portvals(orders_file=of, start_val=sv)
+    if isinstance(portvals, pd.DataFrame):
+        portvals = portvals[portvals.columns[0]]  # just get the first column
+    else:
+        "warning, code did not return a DataFrame"
+
+    start_date = start
+    end_date = end
+    daily_returns = portvals.pct_change(1)
+    std_daily = daily_returns.std()
+    sr_df = daily_returns - 0.0
+    sr = np.sqrt(252) * (sr_df.mean() / std_daily)
+    daily_returns = daily_returns.mean()
+
+    cum_ret, avg_daily_ret, std_daily_ret, sharpe_ratio = [(portvals.iloc[-1] - 1000000) / 1000000, daily_returns,
+                                                           std_daily, sr]
+
+    print(f"Start Date:  \t\t\t{start_date}")
+    print(f"End Date:    \t\t\t{end_date}")
+
+    print("")
+    print(f"Sharpe Ratio of Portfolio comprised of $SPY: \t\t{sharpe_ratio}")
+    print(f"Cumulative Return of Portfolio comprised of $SPY: \t{cum_ret}")
+    print(f"Standard Deviation of Portfolio comprised of $SPY: \t{std_daily_ret}")
+    print(f"Average Daily Return of Portfolio comprised of $SPY: \t{avg_daily_ret}")
+    print(f"Final Portfolio Value: \t\t{portvals[-1]}")
+
+    plot_data(portvals, "SPY")
+
+    # Create Portfolio Comprised of SPXL ------------------------------------------------------------------
     of = "./orders/FINAL_PROJECT_ORDERS_SPXL.csv"
     sv = 10000
 
@@ -87,37 +140,9 @@ def RunCode():
     sr = np.sqrt(252) * (sr_df.mean() / std_daily)
     daily_returns = daily_returns.mean()
 
-    # Get portfolio stats
-    # Here we just fake the data. you should use your code from previous assignments.
-    start_date = start
-    end_date = end
-    portvals_spy = GetSpyDf(start, end)
-    portvals_spy = portvals_spy.loc[:, 'SPY']
-    daily_returns_spy = portvals_spy.pct_change(1)
-    std_daily_spy = daily_returns_spy.std()
-    sr_df_spy = daily_returns_spy - 0.0
-    sr_spy = np.sqrt(252) * (sr_df_spy.mean() / std_daily_spy)
-    daily_returns_spy = daily_returns_spy.mean()
-
     cum_ret, avg_daily_ret, std_daily_ret, sharpe_ratio = [(portvals.iloc[-1] - 1000000) / 1000000, daily_returns,
                                                            std_daily, sr]
-    cum_ret_SPY, avg_daily_ret_SPY, std_daily_ret_SPY, sharpe_ratio_SPY = [(portvals_spy.iloc[-1] - 1000000) / 1000000,
-                                                                           daily_returns_spy,
-                                                                           std_daily_spy, sr_spy]
 
-    print(f"Start Date:  \t\t\t{start_date}")
-    print(f"End Date:    \t\t\t{end_date}")
-
-    # Create Portfolio Comprised of SPY ------------------------------------------------------------------
-    print("")
-    print(f"Sharpe Ratio of $SPY:  \t\t{sharpe_ratio_SPY}\n")
-    print(f"Cumulative Return of $SPY : \t{cum_ret_SPY}\n")
-    print(f"Standard Deviation of $SPY : \t{std_daily_ret_SPY}\n")
-    print(f"Average Daily Return of $SPY : \t{avg_daily_ret_SPY}\n")
-
-    plot_data(portvals_spy, "SPY")
-
-    # Create Portfolio Comprised of SPXL ------------------------------------------------------------------
     print("")
     print(f"Sharpe Ratio of Portfolio comprised of $SPXL: \t\t{sharpe_ratio}")
     print(f"Cumulative Return of Portfolio comprised of $SPXL: \t{cum_ret}")
