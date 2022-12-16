@@ -7,6 +7,8 @@ Checklist of what completed
 	would "buy" 1 stock of that Ibond whose price I manipulated to act like it would
 	pay out interest twice a year every 6 months.
 
+	VIDEO LINK: https://youtu.be/xJhgw7Oluy0
+
 	- QQQ data
 	- SPY data
 	- SPXL data
